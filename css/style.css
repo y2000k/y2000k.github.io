@@ -27,3 +27,10 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,:after,:before{backgr
     font-size: 20px;
     line-height: 2.5;
 }
+@media(max-width:860px){
+
+    .txt-box{
+        width: 80%;
+        margin: 0 auto;
+    }
+}
