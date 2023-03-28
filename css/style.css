@@ -35,4 +35,11 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,:after,:before{backgr
         width: 80%;
         margin: 100px auto;
     }
+.txt-box>h2{
+    font-size: 32px;
+
+}
+.txt-box>p{
+    font-size: 16px;
+}
 }
