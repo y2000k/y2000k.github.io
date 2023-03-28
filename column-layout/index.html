@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>column-layoutとlightboxの実装</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+
+</head>
+<body>
+  <h1>column-layout</h1>
+  <div class="column-wrapper">
+<div class="box">
+    <p class="photo"><a href="img/27-1.jpg" data-lightbox="photo"><img src="img/27-1.jpg" alt=""></a>
+    </p>
+    <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, illo.</p>
+</div>
+<div class="box">
+    <p class="photo"><a href="img/27-2.jpg" data-lightbox="photo"><img src="img/27-2.jpg" alt=""></a>
+    </p>
+    <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, illo.</p>
+</div>
+<div class="box">
+    <p class="photo"><a href="img/27-3.jpg" data-lightbox="photo"><img src="img/27-3.jpg" alt=""></a>
+    </p>
+    <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, illo.</p>
+</div>
+<div class="box">
+    <p class="photo"><a href="img/27-4.jpg" data-lightbox="photo"><img src="img/27-4.jpg" alt=""></a>
+    </p>
+    <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, illo.</p>
+</div>
+<div class="box">
+    <p class="photo"><a href="img/27-5.jpg" data-lightbox="photo"><img src="img/27-5.jpg" alt=""></a>
+    </p>
+    <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, illo.</p>
+</div>
+<div class="box">
+    <p class="photo"><a href="img/27-6.jpg" data-lightbox="photo"><img src="img/27-6.jpg" alt=""></a>
+    </p>
+    <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, illo.</p>
+</div>
+<div class="box">
+    <p class="photo"><a href="img/27-7.jpg" data-lightbox="photo"><img src="img/27-7.jpg" alt=""></a>
+    </p>
+    <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, illo.</p>
+</div>
+<div class="box">
+    <p class="photo"><a href="img/27-8.jpg" data-lightbox="photo"><img src="img/27-8.jpg" alt=""></a>
+    </p>
+    <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, illo.</p>
+</div>
+<div class="box">
+    <p class="photo"><a href="img/27-9.jpg" data-lightbox=""><img src="img/27-9.jpg" alt=""></a>
+    </p>
+    <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, illo.</p>
+</div>
+<div class="box">
+    <p class="photo"><a href="img/27-10.jpg" data-lightbox="photo"><img src="img/27-10.jpg" alt=""></a>
+    </p>
+    <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, illo.</p>
+</div>
+<div class="box">
+    <p class="photo"><a href="img/27-11.jpg" data-lightbox="photo"><img src="img/27-11.jpg" alt=""></a>
+    </p>
+    <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, illo.</p>
+</div>
+<div class="box">
+    <p class="photo"><a href="img/27-12.jpg" data-lightbox="photo"><img src="img/27-12.jpg" alt=""></a>
+    </p>
+    <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, illo.</p>
+</div>
+<div class="box">
+    <p class="photo"><a href="img/27-13.jpg" data-lightbox="photo"><img src="img/27-13.jpg" alt=""></a>
+    </p>
+    <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, illo.</p>
+</div>
+<div class="box">
+    <p class="photo"><a href="img/27-14.jpg" data-lightbox="photo"><img src="img/27-14.jpg" alt=""></a>
+    </p>
+    <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, illo.</p>
+</div>
+<div class="box">
+    <p class="photo"><a href="img/27-15.jpg" data-lightbox="photo"><img src="img/27-15.jpg" alt=""></a>
+    </p>
+    <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, illo.</p>
+</div>
+<div class="box">
+    <p class="photo"><a href="img/27-16.jpg" data-lightbox="photo"><img src="img/27-16.jpg" alt=""></a>
+    </p>
+    <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, illo.</p>
+</div>
+<div class="box">
+    <p class="photo"><a href="img/27-17.jpg" data-lightbox="photo"><img src="img/27-17.jpg" alt=""></a>
+    </p>
+    <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, illo.</p>
+</div>
+<div class="box">
+    <p class="photo"><a href="img/27-18.jpg" data-lightbox="photo"><img src="img/27-18.jpg" alt=""></a>
+    </p>
+    <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, illo.</p>
+</div><!-- .box -->
+
+  </div>  <!-- column-wrapper -->
+  
+
+<div class="button01" id="more-btn">
+    <a href="#">もっと見る</a>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="js/lightbox.js"></script>
+
+  <script>
+$(function(){
+    //#more-btnをclickしたら
+    $('#more-btn>a').on('click',function(){
+        $('.box:nth-of-type(n+9)').slideToggle(200);
+  
+    //#more-btn>aのテキストを閉じるに変える
+
+    if($(this).text() === 'もっと見る'){
+        $(this).text('閉じる');
+    }else{
+$(this).text('もっと見る');
+    }
+return false;//ページトップに戻る機能をoff
+});
+});
+
+  </script>
+</body>
+</html>

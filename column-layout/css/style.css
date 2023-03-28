@@ -1,0 +1,100 @@
+@charset "utf-8";
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+img{
+    vertical-align: bottom;
+    max-width: 100%;
+}
+h1{
+    text-align: center;
+    margin: 40px 0;
+}
+.column-wrapper{
+    width: 90%;
+    margin: 0 auto 100px;
+    columns: 4;/* 何列にするかの設定 @media */
+    gap: 30px;
+}
+.box{
+    break-inside: avoid;/* 要素の中で改行されないようにする */
+    background-color: rgb(201, 238, 145);
+    padding: 20px;
+    margin-bottom: 30px;
+    
+}
+.photo{
+margin-bottom: 18px;
+}
+.photo img{
+    border-radius: 8px;
+}
+.txt{
+    line-height: 1.6;
+}
+#more-btn{
+    display: block;
+    margin-bottom: 50px;
+}
+.button01 a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1em 2em;
+    width: 300px;
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #cccccc;
+    transition: 0.3s;
+  }
+  
+  .button01 a::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-top: 3px solid #333333;
+    border-right: 3px solid #333333;
+    transform: rotate(45deg);
+  }
+  
+  .button01 a:hover {
+    text-decoration: none;
+    background-color: #bbbbbb;
+  }
+/* 960px以下の時は3カラム */
+@media(max-width:960px){
+    .column-wrapper{
+        columns: 3;
+        width: 96%;
+        gap: 20px;
+     } 
+     .box{
+        margin-bottom: 20px;
+     }    
+}
+
+
+
+/* 640px以下の時は２カラム */
+@media(max-width:640px){
+    .column-wrapper{
+        columns: 2;
+        width: 64%;
+        gap: 10px;
+     } 
+     .box{
+        margin-bottom: 10px;
+     }
+     .box:nth-of-type(n+9){
+        display: none;
+     } 
+     #more-btn{
+        display: block;
+     }
+}
+
